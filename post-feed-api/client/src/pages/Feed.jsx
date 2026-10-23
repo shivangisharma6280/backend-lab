@@ -1,5 +1,5 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 
 const Feed = () => {
   const [posts, setPosts] = useState([
@@ -7,8 +7,21 @@ const Feed = () => {
       _id: "1",
       image: "https://img.magnific.com/free-photo/cosmos-flowers_1373-83.jpg?semt=ais_hybrid&w=740&q=80",
       caption: "Beautiful flower"
+    },
+    {
+      _id: "2",
+      image: "https://img.magnific.com/free-photo/cosmos-flowers_1373-83.jpg?semt=ais_hybrid&w=740&q=80",
+      caption: "Beautiful flower"
     }
   ]);
+
+  useEffect(()=>{
+    
+    axios.get("http://localhost:3000/posts")
+    .then((res)=>{
+        setPosts(res.data.posts)
+    })
+  },[])
 
   return (
     <section className="feed-section">
