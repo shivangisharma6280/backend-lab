@@ -67,7 +67,13 @@ todo-list-api/
 
 ## System Architecture
 
-![Todo List API Architecture](assets/architecture.png)
+<p align="center">
+  <img
+    src="assets/architecture.png"
+    alt="Todo List API Architecture"
+    width="600"
+  />
+</p>
 
 ## API Endpoints
 
