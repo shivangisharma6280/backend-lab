@@ -26,7 +26,13 @@ Start the backend server separately to fetch posts from the API.
 
 ## System Architecture
 
-![post feed API Architecture](assets/post-feed.png)
+<p align="center">
+  <img
+    src="assets/post-feed.png"
+    alt="Post Feed API Architecture"
+    width="600"
+  />
+</p>
 
 ## Project Status
 Learning project — currently under development.
