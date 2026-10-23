@@ -28,6 +28,8 @@ A RESTful API built using **Node.js, Express.js, and MongoDB** that allows users
 
 ## Folder Structure
 
+```text
+
 todo-list-api/
 │
 ├── src/
@@ -61,6 +63,7 @@ todo-list-api/
 ├── package.json
 ├── server.js
 └── README.md
+```
 
 ## System Architecture
 
