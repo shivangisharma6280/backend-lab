@@ -9,4 +9,14 @@ const router = express.Router();
 /* POST /api/auth/register */
 router.post('/register', authController.registerUser)
 
+
+//Test route to access cookies(token)
+/*router.get("/test", (req, res) => {
+    console.log("Cookies: ", req.cookies)
+    res.json({
+        message: "Test route",
+        cookies: req.cookies
+    })
+})*/
+
 module.exports = router;
