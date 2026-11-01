@@ -1,19 +1,20 @@
-# GET API Testing with Jest & Supertest
+# Backend API Testing & Validation
 
 ## Overview
-A mini backend testing task where I tested a simple `GET /` API endpoint using **Jest** and **Supertest** in Node.js.
+This mini task focuses on learning and implementing backend API testing and input validation using Jest, Supertest, and Express Validator with Node.js and Express.js.
 
-## Tech Stack
-- Node.js
-- Express.js
-- Jest
-- Supertest
+## Tools & Libraries
 
-## What I Tested
-- Sent a GET request to the `/` endpoint.
-- Verified the HTTP status code (`200 OK`).
-- Checked the response body.
-- Used Supertest to make HTTP requests and Jest to run assertions.
+- **Jest:** Used as a testing framework to write and execute test cases and verify API responses.
+- **Supertest:** Used to send HTTP requests to the Express application and test API endpoints without manually running the server.
+- **Express Validator:** Used to validate and sanitize user input, including username, email, and password, before processing requests.
+
+## Tasks Performed
+
+- Created a basic `GET /` API endpoint using Express.js.
+- Wrote test cases using Jest to verify API functionality.
+- Used Supertest to make HTTP requests and check response status codes and response data.
+- Implemented input validation for username, email, and password using Express Validator.
 
 ## Installation
 
@@ -36,4 +37,5 @@ npm test
 ```
 
 ## Learning Outcome
-Learned the basics of API testing using Jest and Supertest, including sending HTTP requests and validating API responses.
+
+Gained practical experience in writing API test cases, testing HTTP endpoints, validating user input, and understanding the role of different backend testing and validation tools.
