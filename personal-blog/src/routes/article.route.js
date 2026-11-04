@@ -7,6 +7,9 @@ const router = express.Router();
 
 router.post('/create', authAdmin, articleController.createArticle);
 router.get('/home', authUser, articleController.getAllArticles);
+router.get('/admin', authAdmin, articleController.getAllArticles);
+router.patch('/edit/:articleId', authAdmin, articleController.editArticle);
+router.get('/:articleId', authUser, articleController.getArticle);
 
 
 module.exports = router;

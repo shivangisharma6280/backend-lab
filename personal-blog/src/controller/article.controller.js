@@ -32,4 +32,27 @@ async function getAllArticles(req, res) {
     })
 }
 
-module.exports = { createArticle, getAllArticles };
+async function getArticle(req, res){
+    const articleId = req.params.articleId;
+    const article = await articleModel.findById(articleId).select("title content publishedAt");
+
+    res.status(200).json({
+        message: "Article fetched successfully",
+        article: article,
+    })
+}
+
+async function editArticle(req, res){
+    const articleId = req.params.articleId;
+    const { title, content } = req.body;
+    const article = await articleModel.findByIdAndUpdate(articleId, {
+        title: title,
+        content: content
+    },{new: true});
+    return res.status(200).json({
+        message: "Article updated successfully",
+        article: article,
+    })
+}
+
+module.exports = { createArticle, getAllArticles, getArticle, editArticle };

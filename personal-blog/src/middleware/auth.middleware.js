@@ -35,6 +35,7 @@ async function authAdmin(req, res, next) {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     if(decoded.role !== 'admin'){
+        
         return res.status(403).json({ message : "You dont't have access"});
 
     }
