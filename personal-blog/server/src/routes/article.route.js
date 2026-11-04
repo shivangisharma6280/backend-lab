@@ -6,10 +6,10 @@ const { authUser, authAdmin } = require('../middleware/auth.middleware');
 const router = express.Router();
 
 router.post('/create', authAdmin, articleController.createArticle);
-router.get('/home', authUser, articleController.getAllArticles);
+router.get('/home',articleController.getAllArticles);
 router.get('/admin', authAdmin, articleController.getAllArticles);
 router.patch('/edit/:articleId', authAdmin, articleController.editArticle);
-router.get('/:articleId', authUser, articleController.getArticle);
+router.get('/:articleId',articleController.getArticle);
 
 
 module.exports = router;
